@@ -7,17 +7,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
-        <ion-list-header>
-            <ion-label>Classes</ion-label>
-        </ion-list-header>
-        <ion-item *ngFor="let card of cardDecks">
-            <ion-avatar slot="start">
-                <img [src]="'assets/images/'+ card +'.png'">
-            </ion-avatar>
-            <ion-label>
-                <h2>{{card}}</h2>
-            </ion-label>
-        </ion-item>
-    </ion-list>
+    <app-card-list *ngFor="let card of cardDecks" [listName]="card.name" [items]="card.type" [navigateTo]="generateUrl">
+
+    </app-card-list>
 </ion-content>

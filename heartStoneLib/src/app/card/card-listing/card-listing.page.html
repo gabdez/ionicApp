@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{cardDeckGroup}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-img [src]="'assets/images/'+ cardDeck +'.png'"></ion-img>
+
+    <ion-card-content>
+      <ion-card-title>{{cardDeck}}</ion-card-title>
+
+      <p>The content for this card</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
