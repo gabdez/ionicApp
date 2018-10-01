@@ -6,6 +6,7 @@ import { CardService } from './shared/card.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CardListComponent } from './component/card-list.component';
 import { CardListingPage } from './card-listing/card-listing.page';
+import { CardDetailPage } from './card-detail/card-detail.page';
 
 @NgModule({
     imports: [
@@ -16,7 +17,7 @@ import { CardListingPage } from './card-listing/card-listing.page';
     providers: [
         CardService,
     ],
-    declarations: [CardDeckPage, CardListComponent, CardListingPage]
+    declarations: [CardDeckPage, CardListComponent, CardListingPage, CardDetailPage]
 })
 
 export class CardPageModule { }

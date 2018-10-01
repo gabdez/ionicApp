@@ -27,7 +27,6 @@ export class CardDeckPage {
 
     extractAllowedDecks(cardDecks: CardDeck[]) {
         this.ALLOWED_DECKS.forEach((deckName: string) => {
-            debugger;
             this.cardDecks.push({ name: deckName, type: cardDecks[deckName] })
         })
     }
