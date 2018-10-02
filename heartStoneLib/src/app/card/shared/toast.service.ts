@@ -6,18 +6,23 @@ export class ToastService {
 
     constructor(private toastCtrl: ToastController) { }
 
-    presentToast() {
-        let toast = this.toastCtrl.create({
-            message: 'User was added successfully',
-            duration: 3000,
-            position: 'top'
+    async presentToast() {
+        const toast = await this.toastCtrl.create({
+          message: 'Your settings have been saved.',
+          duration: 3000,
+          position: 'top'
         });
-
-        toast.onDidDismiss(() => {
-            console.log('Dismissed toast');
-        });
-
         toast.present();
-    }
+      }
+
+      async presentErrorToast(message: string){
+          const toast = await this.toastCtrl.create({
+              message,
+              position: 'top',
+              duration: 3000,
+              cssClass: 'toast-error'
+          });
+          toast.present();
+      }
 
 }
